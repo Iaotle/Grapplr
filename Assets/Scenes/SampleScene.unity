@@ -378,7 +378,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.5, y: 0.48}
-    newSize: {x: 0.5, y: 3.828584}
+    newSize: {x: 0.5, y: 4.061408}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -435,7 +435,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 0.5, y: 3.828584}
+  m_Size: {x: 0.5, y: 4.061408}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -449,7 +449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529548131}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: 6.4416, z: 0}
+  m_LocalPosition: {x: 7, y: 6.3252, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -829,7 +829,6 @@ GameObject:
   - component: {fileID: 891995312}
   - component: {fileID: 891995311}
   - component: {fileID: 891995310}
-  - component: {fileID: 891995313}
   - component: {fileID: 891995314}
   - component: {fileID: 891995315}
   - component: {fileID: 891995317}
@@ -979,25 +978,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!232 &891995313
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891995307}
-  m_Enabled: 0
-  serializedVersion: 4
-  m_EnableCollision: 1
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 3
-  m_MaxDistanceOnly: 1
 --- !u!114 &891995314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1017,8 +997,11 @@ MonoBehaviour:
   jointDist: {fileID: 891995317}
   line: {fileID: 891995316}
   defaultDistance: 3
+  maxDistance: 5
   defaultDampening: 0
   defaultFrequency: 0.7
+  isGrappling: 0
+  isLeashed: 0
 --- !u!231 &891995315
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1038,7 +1021,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 3
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 0.7
 --- !u!120 &891995316
 LineRenderer:
   m_ObjectHideFlags: 0
